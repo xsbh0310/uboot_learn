@@ -1,0 +1,26 @@
+学习：
+
+1.uboot中的初始化函数的写法：采用遍历函数指针数组的方式，运行基本的初始化函数：
+
+typedef int (init_fnc_t) (void);
+
+init_fnc_t *init_sequence[] = {
+    初始化函数名...(输入参数:void, 返回值:int)
+    NULL
+};
+
+init_fnc_t **init_fnc_ptr;
+
+for(init_fnc_ptr = init_sequence; *init_fnc_ptr; init_fnc_ptr++) {
+    if((*init_fnc_ptr)() != 0) { /* 初始化成功返回0 */
+        hang();
+    }
+}
+
+void hang(void) /* 挂起，表示初始化失败 */
+{
+    while(1);
+}
+
+2.uboot中的寄存器访问方式：将寄存器定义在结构体中，通过定义该结构的结构体指针并实例化后，使用结构体来访问相应的寄存器。
+与ST公司的标准库函数版本中对寄存器的封装写法类似
