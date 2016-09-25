@@ -28,3 +28,16 @@ void hang(void) /* 挂起，表示初始化失败 */
 3.console的实现机制（uboot中的console是直接映射到硬件串口的通信函数）
 
 4.S5PV210的时钟体系以及uboot中print_cpuinfo函数对时钟的计算方法
+
+5.ubuntu下镜像烧写到SD卡过程：
+    1：进入sd_fusing目录下
+    2：make clean
+    3：make
+    4：插入sd卡，ls /dev/sd*得到SD卡在ubuntu中的设备号（一般是/dev/sdb，注意SD卡要连接到虚拟机ubuntu中，不要接到windows中）
+    5：./sd_fusing.sh /dev/sdb完成烧录（注意不是sd_fusing2.sh）
+
+6.了解CRC
+
+
+
+
