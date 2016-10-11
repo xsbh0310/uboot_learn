@@ -1,0 +1,8 @@
+ubuntu网卡重启指令：
+    1.ifdown ens33
+    2.ifup ens33
+ubuntu网络配置文件:/etc/network/interfaces
+
+搭建openssh环境:
+    1.安装ssh-server(apt-get install openssh-server)
+    2.sercurecrt或sshsercureshell登陆

@@ -1,2 +1,7 @@
 学习：
+
     1.编译mkimage.c会生成mkimage工具，在编译内核时，使用make uImage命令会将zImage加工成uImage（uImage与zImage的区别在于uImage比zImage头部多了64个uImage的信息），用于uboot启动内核，具体实现可以参看mkimage.c
+
+    2.linux initrd 原理
+
+    3.linux设备树
