@@ -29,7 +29,7 @@ File systems  --->
 		[*] Root file system on NFS  
 					
 3、在uboot中设置如下启动参数（IP根据实际使用更改）
-setenv bootargs root=/dev/nfs nfsroot=192.168.1.109:/root/rootfs/rootfs ip=192.168.1.10:192.168.1.109:192.168.1.1:255.255.255.0::eth0:off  init=/linuxrc console=ttySAC2,115200 
+setenv bootargs root=/dev/nfs nfsroot=192.168.1.109:/root/rootfs/rootfs ip=192.168.1.10:192.168.1.109:192.168.1.1:255.255.255.0::eth0:off  init=/linuxrc console=ttySAC2,115200
 
 bootargs=console=ttySAC2,115200 root=/dev/mmcblk0p2 rw init=/linuxrc rootfstype=ext3
 
